@@ -50,7 +50,7 @@ public final class FlatteningTransformingSequenceBasicTest {
         Sequence<Integer> limitedSeq = new LimitSequence<>((Sequence<Integer>) seq, 6);
         Iterator<Integer> it = limitedSeq.iterator();
         for (int i = 0; i < 6; i++) {
-            Assertions.assertTrue(it.hasNext(), i == 0 ? "Resulting sequence should have 6 elements! Has: 1 element" : "Resulting sequence should have 6 elements! Has: " + (i + 1) + " elements");
+            Assertions.assertTrue(it.hasNext(), i == 1 ? "Resulting sequence should have 6 elements! Has: 1 element" : "Resulting sequence should have 6 elements! Has: " + i + " elements");
             Assertions.assertEquals(i + 1, it.next(), "Resulting sequence should be: {1, 2, 3, 4, 5, 6}! Wrong at index: " + i);
         }
     }
