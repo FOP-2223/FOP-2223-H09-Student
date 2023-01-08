@@ -101,11 +101,11 @@ public class H09_RubricProvider implements RubricProvider {
         .build();
 
     public static final Criterion H3_1_1 = createCriterion(
-        "Klassensignature von ArraySequence ist korrekt und der Iterator funktioniert für einfache Fälle",
+        "Klassensignatur von ArraySequence ist korrekt und der Iterator funktioniert für einfache Fälle",
         () -> ArraySequenceBasicTest.class);
 
     public static final Criterion H3_1_2 = Criterion.builder()
-        .shortDescription("ArraySequence is vollständig korrekt implementiert")
+        .shortDescription("ArraySequence ist vollständig korrekt implementiert")
         .build();
 
     public static final Criterion H3_1 = Criterion.builder()
@@ -118,7 +118,7 @@ public class H09_RubricProvider implements RubricProvider {
         () -> FibonacciSequenceBasicTest.class);
 
     public static final Criterion H3_2_2 = Criterion.builder()
-        .shortDescription("FibonacciSequence is vollständig korrekt implementiert")
+        .shortDescription("FibonacciSequence ist vollständig korrekt implementiert")
         .build();
 
     public static final Criterion H3_2 = Criterion.builder()
@@ -131,7 +131,7 @@ public class H09_RubricProvider implements RubricProvider {
         () -> BasicFactorySequenceBasicTest.class);
 
     public static final Criterion H3_3_2 = Criterion.builder()
-        .shortDescription("BasicFactorySequence is vollständig korrekt implementiert")
+        .shortDescription("BasicFactorySequence ist vollständig korrekt implementiert")
         .build();
 
     public static final Criterion H3_3 = Criterion.builder()
@@ -149,11 +149,11 @@ public class H09_RubricProvider implements RubricProvider {
         () -> FilteringSequenceBasicTest.class);
 
     public static final Criterion H4_1_2 = createCriterion(
-        "Attribute und konstruktor sind bis auf Wildcards korrekt implementiert",
+        "Attribute und Konstruktor sind bis auf Wildcards korrekt implementiert",
         () -> FilteringSequenceIntermediateTest.class);
 
     public static final Criterion H4_1_3 = Criterion.builder()
-        .shortDescription("FilteringSequence is vollständig korrekt implementiert")
+        .shortDescription("FilteringSequence ist vollständig korrekt implementiert")
         .build();
 
     public static final Criterion H4_1 = Criterion.builder()
@@ -166,11 +166,11 @@ public class H09_RubricProvider implements RubricProvider {
         () -> TransformingSequenceBasicTest.class);
 
     public static final Criterion H4_2_2 = createCriterion(
-        "Attribute und konstruktor von TransformingSequence sind bis auf Wildcards korrekt implementiert",
+        "Attribute und Konstruktor von TransformingSequence sind bis auf Wildcards korrekt implementiert",
         () -> TransformingSequenceIntermediateTest.class);
 
     public static final Criterion H4_2_3 = Criterion.builder()
-        .shortDescription("TransformingSequence is vollständig korrekt implementiert")
+        .shortDescription("TransformingSequence ist vollständig korrekt implementiert")
         .build();
 
     public static final Criterion H4_2 = Criterion.builder()
@@ -183,7 +183,7 @@ public class H09_RubricProvider implements RubricProvider {
         () -> FlatteningTransformingSequenceBasicTest.class);
 
     public static final Criterion H4_3_2 = createCriterion(
-        "Attribute und konstruktor von FlatteningTransformingSequence sind bis auf Wildcards korrekt implementiert",
+        "Attribute und Konstruktor von FlatteningTransformingSequence sind bis auf Wildcards korrekt implementiert",
         () -> FlatteningTransformingSequenceIntermediateTest.class);
 
     public static final Criterion H4_3_3 = Criterion.builder()
@@ -191,7 +191,7 @@ public class H09_RubricProvider implements RubricProvider {
         .build();
 
     public static final Criterion H4_3_4 = Criterion.builder()
-        .shortDescription("FlatteningTransformingSequence is vollständig korrekt implementiert")
+        .shortDescription("FlatteningTransformingSequence ist vollständig korrekt implementiert")
         .build();
 
     public static final Criterion H4_3 = Criterion.builder()
