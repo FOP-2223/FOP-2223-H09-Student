@@ -1,5 +1,6 @@
 package h09.sequence.collect;
 
+import h09.InvokeAssertions;
 import h09.SignatureTestExtensions;
 import h09.basic.BasicBinaryOperations;
 import h09.basic.IntegerBasicBinaryOperations;

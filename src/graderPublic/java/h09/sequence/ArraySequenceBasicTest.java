@@ -1,5 +1,6 @@
 package h09.sequence;
 
+import h09.InvokeAssertions;
 import h09.SignatureTestExtensions;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
