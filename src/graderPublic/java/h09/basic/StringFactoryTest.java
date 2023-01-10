@@ -58,8 +58,10 @@ public final class StringFactoryTest {
         final Method createMethod = Assertions.assertDoesNotThrow(() ->
                 StringFactory.class.getDeclaredMethod("create"),
             "StringFactory should have a create method");
-        return Assertions.assertDoesNotThrow(() ->
-                (String) createMethod.invoke(factory),
-            "Failed to invoke StringFactory create method");
+        try {
+            return (String) createMethod.invoke(factory);
+        } catch (Exception exc) {
+            throw new AssertionError("The create method should not throw exceptions");
+        }
     }
 }
