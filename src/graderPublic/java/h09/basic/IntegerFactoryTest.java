@@ -75,8 +75,10 @@ public final class IntegerFactoryTest {
         final Method createMethod = Assertions.assertDoesNotThrow(() ->
                 IntegerFactory.class.getDeclaredMethod("create"),
             "IntegerFactory should have a create method");
-        return Assertions.assertDoesNotThrow(() ->
-                (Integer) createMethod.invoke(factory),
-            "Failed to invoke IntegerFactory create method");
+        try {
+            return (Integer) createMethod.invoke(factory);
+        } catch (Exception exc) {
+            throw new AssertionError("The create method should not throw exceptions");
+        }
     }
 }
