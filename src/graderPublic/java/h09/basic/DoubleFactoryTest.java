@@ -75,8 +75,10 @@ public final class DoubleFactoryTest {
         final Method createMethod = Assertions.assertDoesNotThrow(() ->
                 DoubleFactory.class.getDeclaredMethod("create"),
             "DoubleFactory should have a create method");
-        return Assertions.assertDoesNotThrow(() ->
-                (Double) createMethod.invoke(factory),
-            "Failed to invoke DoubleFactory create method");
+        try {
+            return (Double) createMethod.invoke(factory);
+        } catch (Exception exc) {
+            throw new AssertionError("The create method should not throw exceptions");
+        }
     }
 }
