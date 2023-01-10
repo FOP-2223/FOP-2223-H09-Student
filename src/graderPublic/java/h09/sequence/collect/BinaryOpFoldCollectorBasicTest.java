@@ -32,7 +32,7 @@ public final class BinaryOpFoldCollectorBasicTest {
         final Constructor<BinaryOpFoldCollector> constructor = Assertions.assertDoesNotThrow(() ->
                 BinaryOpFoldCollector.class.getDeclaredConstructor(Object.class, BinaryOperator.class),
             "BinaryOpFoldCollector does not have a correct constructor");
-        final SequenceCollector<Integer, Integer> collector = Assertions.assertDoesNotThrow(() ->
+        final SequenceCollector<Integer, Integer> collector = InvokeAssertions.assertDoesNotThrow(() ->
                 (SequenceCollector<Integer, Integer>) constructor.newInstance(1,
                     (BinaryOperator<Integer>) (a, b) -> a * b),
             "BinaryOpFoldCollector does not have a correct constructor");

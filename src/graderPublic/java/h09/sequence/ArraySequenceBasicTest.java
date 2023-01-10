@@ -23,7 +23,7 @@ public final class ArraySequenceBasicTest {
         final Constructor<ArraySequence> constructor = Assertions.assertDoesNotThrow(() ->
             ArraySequence.class.getDeclaredConstructor(Object[].class),
             "ArraySequence does not have a correct constructor");
-        final ArraySequence sequence = Assertions.assertDoesNotThrow(() ->
+        final ArraySequence sequence = InvokeAssertions.assertDoesNotThrow(() ->
             constructor.newInstance(new Object[]{new Integer[]{1, 2, 3}}),
             "Failed to invoke ArraySequence constructor");
         final var iterator = sequence.iterator();

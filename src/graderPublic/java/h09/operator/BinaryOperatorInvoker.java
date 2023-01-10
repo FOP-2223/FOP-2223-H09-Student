@@ -13,7 +13,7 @@ public final class BinaryOperatorInvoker {
         final Method method = Assertions.assertDoesNotThrow(() ->
                 operations.getClass().getDeclaredMethod("apply", Object.class, Object.class),
             "Could not find apply method in " + operations.getClass().getSimpleName());
-        return Assertions.assertDoesNotThrow(() -> method.invoke(operations, left, right),
+        return InvokeAssertions.assertDoesNotThrow(() -> method.invoke(operations, left, right),
             "Could not invoke apply method in " + operations.getClass().getSimpleName());
     }
 }

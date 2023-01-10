@@ -28,7 +28,7 @@ public final class FilteringSequenceBasicTest {
             FilteringSequence.class.getDeclaredConstructor(Sequence.class, Predicate.class),
             "FilteringSequence does not have a correct constructor");
         final Sequence<String> og = Sequence.of(List.of("aa", "bbb", "cc", "d", "eee", "ffff", "g", "hh", "ii", "jjj"));
-        final FilteringSequence sequence = Assertions.assertDoesNotThrow(() ->
+        final FilteringSequence sequence = InvokeAssertions.assertDoesNotThrow(() ->
             constructor.newInstance(og, (Predicate<String>) s -> s.length() > 2),
             "Failed to invoke FilteringSequence constructor");
         final List result = List.of("bbb", "eee", "ffff", "jjj");

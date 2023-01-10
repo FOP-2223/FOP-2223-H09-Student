@@ -32,7 +32,7 @@ public final class SummingCollectorBasicTest {
         final Constructor<SummingCollector> constructor = Assertions.assertDoesNotThrow(() ->
                 SummingCollector.class.getDeclaredConstructor(Object.class, BasicBinaryOperations.class),
             "SummingCollector does not have a correct constructor");
-        final SequenceCollector<Integer, Integer> collector = Assertions.assertDoesNotThrow(() ->
+        final SequenceCollector<Integer, Integer> collector = InvokeAssertions.assertDoesNotThrow(() ->
                 (SequenceCollector<Integer, Integer>) constructor.newInstance(0, new IntegerBasicBinaryOperations()),
             "SummingCollector does not have a correct constructor");
         final int sum = Sequence.of(1, 2, 3, 4, 5).collect(collector);
