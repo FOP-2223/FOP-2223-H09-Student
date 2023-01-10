@@ -77,8 +77,10 @@ public final class IntegerFactoryTest {
             "IntegerFactory should have a create method");
         try {
             return (Integer) createMethod.invoke(factory);
-        } catch (Exception exc) {
-            throw new AssertionError("The create method should not throw exceptions");
+        } catch (InvocationTargetException exc) {
+            throw new AssertionError("The create method should not throw exceptions! Exception message: " + exc.getCause().getMessage());
+        } catch (Exception e) {
+            throw new AssertionError("Failed to invoke IntegerFactory create method");
         }
     }
 }
